@@ -34,12 +34,18 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Save artifacts') {
             steps {
                 archiveArtifacts(artifacts: 'backend/target/sausage-store-0.0.1-SNAPSHOT.jar')
                 archiveArtifacts(artifacts: 'frontend/dist/frontend/*')
             }
+        }
+
+        stage('Notification') {
+            steps {
+                sh 'curl -X POST -H "Content-type: application/json" --data \'{"text":"Ян Бодриевский собрал приложение."}\' https://hooks.slack.com/services/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'
+	   }
         }
     }
 }
