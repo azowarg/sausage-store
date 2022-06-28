@@ -36,7 +36,8 @@ sudo http-server ./dist/frontend/ -p 80 --proxy http://localhost:8080
 Then open your browser and go to [http://localhost](http://localhost)
 
 ### PostgreSQL DB
-Single Node
+
+```Single Node
 hostname: 	rc1a-miskrhof4665dsc1.mdb.yandexcloud.net 
 port: 		6432 
 dbname: 	testdb 
@@ -51,3 +52,4 @@ port: 		6432
 dbname: 	testdb	
 user: 		student
 password: 	1qaz2WSX
+```
